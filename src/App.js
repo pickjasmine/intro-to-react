@@ -1,5 +1,6 @@
 import './App.css';
 import React from "react";
+import Button from "./Button";
 
 function App() {
   const [counter, setCounter] = React.useState(0);
@@ -22,8 +23,15 @@ function App() {
      <p>Counter</p>
 
        <p>{counter}</p>
-       <button onClick={increment}>+</button>
-       <button onClick={decrement}>-</button>
+
+       <Button
+           onClickFunction={increment}
+           buttonText="+"
+       />
+       <Button
+           onClickFunction={decrement}
+           buttonText="-"
+       />
    </div>
   );
 }
