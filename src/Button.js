@@ -1,7 +1,7 @@
 const Button = (props) => {
     // props is an object
 
-    const {onClickFunction, buttonText} = props;
+    const {onClickFunction, children} = props;
     // this is the same as
     // const onClickFunction = props.onClickFunction
     // const buttonText = props.buttonText
@@ -9,7 +9,7 @@ const Button = (props) => {
         <button
             onClick={onClickFunction}
         >
-            {buttonText}
+            {children}
         </button>
     )
 }

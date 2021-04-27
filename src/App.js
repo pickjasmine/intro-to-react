@@ -13,10 +13,13 @@ function App() {
            movies.map((movie) => {
                // this is where the logic happens
                return (
-                   <button key={movie.title} onClick={() => setCurrentMovie(movie)}>
+                   <Button
+                       key={movie.title}
+                       onClickFunction={() => setCurrentMovie(movie)}
+                   >
                        <p>{movie.title}</p>
                        <img src={movie.posterUrl} height={250}/>
-                   </button>
+                   </Button>
                )
            })
        }
